@@ -20,7 +20,13 @@ p {
 /* HEADER */
 
 header {
-    background-color: chartreuse;
+    background-image: linear-gradient(
+    to bottom right,
+    rgb(6, 243, 132) 0%,
+    rgb(6, 243, 38) 40%,
+    rgb(140, 243, 6) 60%,
+    rgb(227, 243, 6) 100%
+    );
     display: flex;
 }
 
@@ -70,7 +76,14 @@ header {
     width: auto;
 }
 
-
+.item :hover {
+    background-color: rgb(6, 243, 132);
+    color: rgb(24, 34, 29);
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    width: auto;
+}
 
 /* INDEX */
 
@@ -173,6 +186,9 @@ footer {
     padding-bottom: 2%;
 }
 
+.proyectos:hover {
+    box-shadow: 0 0.1rem 0.4rem rgb(0, 0, 0.8);
+}
 
 #proyectos_text {
     margin: 5%;
@@ -264,7 +280,9 @@ h4 {
     padding: 2%;
 }
 
-
+#nosotros:hover {
+    box-shadow: 0 0.1rem 0.4rem rgb(0, 0, 0.8);
+}
 
 .nosotros_roles {
     height: 7vw;
