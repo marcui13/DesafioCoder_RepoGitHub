@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../assets/ailogonav.PNG"> <!--imagen de solapa de navegador-->
+    <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../styles/styles2.css">
     <link href="https://fonts.google.com/specimen/Barlow">
     <title>AsterixIA</title>  <!--nombre de solapa de navegador-->
@@ -28,42 +29,21 @@
         
         </header>
     
-        <nav class="main_nav">
-
-            <ul class="nav_list"> <!--Lista de links principales-->
-
-                <li class="nav_list_item">
-                    <a href="../index.html" class="item">
-                        <h2>Inicio</h2>
-                    </a>
-                </li>
-
-                <li class="nav_list_item">
-                    <a href="proyectos.html" class="item">
-                        <h2>Proyectos</h2>
-                    </a>
-                </li>
-
-                <li class="nav_list_item">
-                    <a href="productos.html" class="item">
-                        <h2>Productos</h2>
-                    </a>
-                </li>
-
-                <li class="nav_list_item">
-                    <a href="nosotros.html" class="item">
-                        <h2>Nosotros</h2>
-                    </a>
-                </li>
-
-                <li class="nav_list_item">
-                    <a href="contacto.html" class="item">
-                        <h2>Contacto</h2>
-                    </a>
-                </li>
-
-            </ul>
-
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark main_nav align-items-start">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                        <a class="nav-link" href="proyectos.html">Proyectos</a>
+                        <a class="nav-link" href="productos.html">Productos</a>
+                        <a class="nav-link active" aria-current="page" href="nosotros.html">Nosotros</a>
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </div>
+                </div>
+            </div>
         </nav>
 
         <main class="main_nosotros"> 
@@ -88,66 +68,49 @@
                 <img src="../assets/equipo.png" alt="equipo" class="nosotros_img_equipo">
 
             </article>
-            
+
             <section class="nosotros_section">
-        
-                <article id="nosotros" class="nosotros_ceo">
-    
-                    <h3 id="nosotros_nombre">Hernan Francella (CEO)</h3>
-    
-                    <div id="nosotros_img">
-    
-                        <img src="../assets/hernan.PNG" alt="hernan" class="nostros_img_item">
-    
+
+                <div class="card">
+                    <img src="../assets/hernan.PNG" class="card-img-top nostros_img_item" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Hernan Francella (CEO)</h5>
                     </div>
-    
-                    <ul class="nosotros_roles">
-    
-                        <li class="nosotros_roles_item"> <p> Fundador de la empresa </p> </li>
-                        <li class="nosotros_roles_item"> <p>  Ingeniero Electrónico </p> </li>
-    
-                    </ul>
-    
-                </article>
+                        <ul class="nosotros_roles">
         
-                <article id="nosotros" class="nosotros_coo">
-    
-                    <h3 id="nosotros_nombre">Luis Abdul (COO)</h3>
-    
-                    <div id="nosotros_img">
-    
-                        <img src="../assets/luis.PNG" alt="luis" class="nostros_img_item">
-    
+                            <li class="nosotros_roles_item"> <p> Fundador de la empresa </p> </li>
+                            <li class="nosotros_roles_item"> <p>  Ingeniero Electrónico </p> </li>
+        
+                        </ul>
+                </div>
+                
+                <div class="card">
+                    <img src="../assets/luis.PNG" class="card-img-top nostros_img_item" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Luis Abdul (COO)</h5>
                     </div>
-                    
                     <ul class="nosotros_roles">
-    
+        
                         <li class="nosotros_roles_item"> <p> Ténico Electrónico </p> </li>
                         <li class="nosotros_roles_item"> <p> Impresiones 3D </p> </li>
     
                     </ul>
+                </div>
     
-                </article>
-        
-                <article id="nosotros" class="nosotros_cto">
-    
-                    <h3 id="nosotros_nombre">Agustín Marquardt (CTO)</h3>
-    
-                    <div id="nosotros_img">
-    
-                        <img src="../assets/agustin.PNG" alt="agustin" class="nostros_img_item">
+                <div class="card card_nosotros">
+                    <img src="../assets/agustin.PNG" class="card-img-top nostros_img_item" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Agustín Marquardt (CTO)</h5>
     
                     </div>
-    
                     <ul class="nosotros_roles">
-    
+        
                         <li class="nosotros_roles_item"> <p> Técnico Electrónico </p> </li>
                         <li class="nosotros_roles_item"> <p> Técnico en I.A </p> </li>
                         <li class="nosotros_roles_item"> <p> Web 3 Developer </p> </li>
     
                     </ul>
-    
-                </article>
+                </div>
 
             </section>
     
@@ -183,6 +146,8 @@
         </div>
 
     </footer>
+
+    <script src="../js/bootstrap.js"></script>
 
 </body>
 </html>

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../assets/ailogonav.PNG"> <!--imagen de solapa de navegador-->
+    <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../styles/styles2.css">
     <link href="https://fonts.google.com/specimen/Barlow">
     <title>AsterixIA</title>  <!--nombre de solapa de navegador-->
@@ -28,42 +29,21 @@
         
         </header>
 
-        <nav class="main_nav">
-
-            <ul class="nav_list"> <!--Lista de links principales-->
-
-                <li class="nav_list_item">
-                    <a href="../index.html" class="item">
-                        <h2>Inicio</h2>
-                    </a>
-                </li>
-
-                <li class="nav_list_item">
-                    <a href="proyectos.html" class="item">
-                        <h2>Proyectos</h2>
-                    </a>
-                </li>
-
-                <li class="nav_list_item">
-                    <a href="productos.html" class="item">
-                        <h2>Productos</h2>
-                    </a>
-                </li>
-
-                <li class="nav_list_item">
-                    <a href="nosotros.html" class="item">
-                        <h2>Nosotros</h2>
-                    </a>
-                </li>
-
-                <li class="nav_list_item">
-                    <a href="contacto.html" class="item">
-                        <h2>Contacto</h2>
-                    </a>
-                </li>
-
-            </ul>
-
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark main_nav align-items-start">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                        <a class="nav-link active" aria-current="page" href="proyectos.html">Proyectos</a>
+                        <a class="nav-link" href="productos.html">Productos</a>
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </div>
+                </div>
+            </div>
         </nav>
 
         <main class="main_proyectos">
@@ -80,7 +60,7 @@
                 
             </div>
     
-            <p>Estos son algunos de los últimos proyectos que desarrolamos.</p>
+            <p class="proyectos_text2">Estos son algunos de los últimos proyectos que desarrolamos.</p>
 
             <section class="proyectos_section">
     
@@ -89,7 +69,7 @@
                         <h4>SprAI</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit id at reiciendis ex laudantium corrupti officiis provident incidunt quidem mollitia iste, consequatur voluptate temporibus consectetur? Dolorum quis recusandae tenetur! Amet!</p>
                     </div>
-                    <img src="../assets/sprai.png" alt="sprai" class="proyectos_img_sprai"> 
+                    <img src="../assets/sprai.png" alt="sprai" id="proyectos_img" class="proyectos_img_sprai"> 
                 </article>
     
                 <article class="proyectos">
@@ -143,5 +123,7 @@
 
     </footer>
 
+    <script src="../js/bootstrap.js"></script>
+    
 </body>
 </html>

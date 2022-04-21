@@ -1,4 +1,4 @@
-* { 
+* {
     padding: 0;
     margin: 0;
 }
@@ -13,9 +13,6 @@ a {
     width: auto;
 }
 
-p {
-    font-size: 1.5vw;
-}
 
 /* HEADER */
 
@@ -40,12 +37,16 @@ header {
 
 .header_img {
     width: 10vw;
+    margin: 1vw;
+}
+
+h1 {
+    font-weight: 800;
 }
 
 /* NAV */
 
 .main_nav {
-    height: 60px;
     background-color: rgb(24, 34, 29);
     display: flex;
     justify-content: center;
@@ -146,7 +147,7 @@ footer {
 }
 
 .footer_text {
-    font-size: 1.2vw;
+    margin-top: 1%;
 }
 
 .social_nets {
@@ -199,9 +200,8 @@ footer {
     width: 60%;
 }
 
-h4 {
-    font-size: 2vw;
-    color: rgb(0, 160, 85);
+.proyectos_text2 {
+    text-align: center;
 }
 
 .proyectos_img_sprai {
@@ -228,7 +228,6 @@ h4 {
     margin: 2%;
     width: 100%;
     text-align: center;
-    font-size: 2vw;
 }
 
 .card, .card1 {
@@ -243,6 +242,14 @@ h4 {
     justify-content: center;
 }
 
+.productos_card {
+    display: flex;
+    align-items: center;
+}
+
+#productos_text {
+    margin-left: 5%;
+}
 
 .productos_img_dispelctr, .productos_img_impresora3d, .productos_img_pcb, .productos_img_rpa {
     height: 20vw;
@@ -260,7 +267,6 @@ h4 {
     margin: 2%;
     width: 100%;
     text-align: center;
-    font-size: 2vw;
 }
 
 .nosotros_section {
@@ -284,12 +290,16 @@ h4 {
 }
 
 .nosotros_roles {
-    height: 7vw;
     list-style: none;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    padding: 0;
+}
+
+.card-body {
+    text-align: center;
 }
 
 
@@ -315,18 +325,13 @@ h4 {
     text-align: center;
 }
 
-h3 {
-    font-size: 1.5vw;
-}
+
 
 .nosotros_img_equipo {
     width: 25vw;
     border-radius: 15px;
 }
 
-h2 {
-    font-size: 2vw;
-}
 
 .nosotros_text {
     width: 60%;
@@ -363,6 +368,8 @@ h2 {
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-left: 15%;
+    margin-bottom: 10%;
 }
 
 .contacto_item {
@@ -376,16 +383,31 @@ h2 {
 }
 
 
+.contacto_map {
+    margin: 5%;
+    width: 50vw;
+    display: flex;
+}
+
 .map {
     width: 40vw;
     height: 20vw;
+    margin: 10%;
 }
 
-.contacto_form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.contacto_for {
+    padding: 3vw;
+}
+
+form {
+    width: auto;
+}
+
+.row {
+    margin: 1%;
+    padding: 1%;
+    border: 1px solid black;
+    border-radius: 15px;
 }
 
 .form {
@@ -397,41 +419,12 @@ h2 {
     margin-bottom: 5%;
 }
 
-h5 {
-    font-size: 1.5vw;
-}
-
 .contacto_div {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    height: 45vw;
-}
-
-#multi, #selector {
-    width: 35vw;
-}
-
-#nombre, #correo, #telefono, #direccion, #localidad, #dirpost {
-    width: 20vw;
-}
-
-.paises {
-    width: 35vw;       
-}
-
-.boton {
-    width: 6vw;
-}
-
-#newsletter {
-    width: 2vw;
-}
-
-.boton_de_sugerencias {
-    display: flex;
     align-items: center;
 }
+
 
 /* GRID TEMPLATE AREAS */
 
@@ -455,7 +448,7 @@ h5 {
 
 .wrapper {
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
     "header"
     "nav"
     "content"
@@ -464,12 +457,12 @@ h5 {
 
 /* MEDIA QUERIES */
 
-@media (max-width:500px) 
+@media (max-width:500px)
 {
     .wrapper {
         grid-template-columns: 0.5fr 2fr;
-        grid-template-areas: 
-        "nav header"
+        grid-template-areas:
+        "header header"
         "nav content"
         "nav content"
         "footer footer";
@@ -491,11 +484,10 @@ h5 {
     /* nav */
 
     .main_nav {
-        width: 20vw;
         height: 100%;
         background-color: rgb(24, 34, 29);
     }
-    
+
     .nav_list {
         height: 100%;
         display: flex;
@@ -503,6 +495,7 @@ h5 {
         flex-direction: column;
         justify-content: flex-start;
     }
+
     .nav_list_item {
         display: flex;
         margin: 5%;
@@ -539,6 +532,10 @@ h5 {
         width: 70%;
     }
 
+    #proyectos_img {
+        height: 30vw;
+    }
+
     /* productos */
 
     .productos_section {
@@ -556,11 +553,17 @@ h5 {
 
     .card {
         flex-direction: column;
-        width: 70%;
+
     }
 
     #productos_img {
         margin: 5%;
+    }
+
+    .productos_card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     /* nosotros */
@@ -569,35 +572,41 @@ h5 {
         display: flex;
         align-items: center;
     }
-    
+
     .card1 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        /* width: 100%; */
+        display: flex;
+        flex-direction: column;
     }
-    
+
     .nosotros_text {
         padding: 15%;
+        width: 100%;
     }
 
     .nosotros_section {
-            height: 100vw;
-            flex-direction: column;
-            justify-content: space-between;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 1vw;
     }
 
     #nosotros {
         width: 45vw;
     }
 
+    .nosotros_roles {
+        height: auto;
+        margin: 0%;
+        padding: 0%;
+    }
+
+    .nosotros_img_equipo {
+        width: 50vw;
+    }
+
     /* contacto */
 
     .section_contacto {
         flex-direction: column;
-    }
-
-    .contacto_div {
-        flex-direction: row;
     }
 
     .contacto_map {
@@ -611,7 +620,7 @@ h5 {
         justify-content: center;
         margin-left: 3%;
     }
-    
+
     .form {
         flex-direction: row;
     }
@@ -628,13 +637,18 @@ h5 {
         flex-direction: column;
         height: 8vw
     }
-    
-    #multi, #selector {
-        width: 25vw;
+
+    .contacto_img_ubi, .contacto_img_mail, .contacto_img_wsp {
+        height: 8vw;
     }
 
-    .paises {
-        margin-left: 5%;
+    /* footer */
+    .icon_tw, .icon_ig, .icon_yt {
+        width: 5vw;
+    }
+
+    .footer_text {
+        margin-top: 5%;
     }
 }
 
