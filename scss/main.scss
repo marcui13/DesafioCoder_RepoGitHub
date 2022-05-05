@@ -1,4 +1,7 @@
 @import 'color';
+@import 'mixin';
+@import 'mapas';
+@import 'each';
 
 .main_content {
     display: flex;
@@ -6,7 +9,8 @@
     align-items: center;
     background-color: $colorFondo;
     & &_subtitle {
-        margin: 2%;
+        margin-top: 2%;
+        margin-bottom: 2%;
         width: 100%;
         text-align: center;
         font-size: 2vw;
@@ -18,24 +22,17 @@
         align-items: center;
     }
     & &_section2  {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        @extend .main_content_section1; //extensión de las propiedades de section1
     }
     & &_img1 {
         margin: 5%;
         display: flex;
         justify-content: center;
-        border-radius: 15px;
-        width: 50vw;
+        @include widthImg(50vw, 15px); //inclusión del mixin con propiedades de tamaño
     }
     & &_img2 {
-        margin: 5%;
-        display: flex;
-        justify-content: center;
-        border-radius: 15px;
-        width: 32vw;
+        @extend .main_content_img1; //extensión de las propiedades de img1
+        @include widthImg(32vw, 15px); //inclusión del mixin con propiedades de tamaño
     }
     & &_text {
         margin: 5%;
@@ -48,3 +45,9 @@
     }
 }
 
+// utilización de map-get
+.section_contacto {
+    display: map-get($estilos, disp);
+    justify-content: map-get($estilos, justCont);
+    width: map-get($estilos, anchura);
+}
