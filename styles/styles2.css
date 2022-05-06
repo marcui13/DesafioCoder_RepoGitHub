@@ -444,7 +444,7 @@ form {
 
     /* index */
 
-    .index_section1, .index_section2 {
+    .main_content_section1, .main_content_section2 {
         display: flex;
         flex-direction: column;
     }
