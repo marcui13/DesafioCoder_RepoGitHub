@@ -1,11 +1,20 @@
 @import 'flex';
-@import 'color';
 @import 'mixin';
 @import 'mapas';
 @import 'each';
+@import 'grids';
+@import 'wrapper';
 
+@import 'header';
+@import 'footer';
 
-/* GENERAL */
+@import 'index';
+@import 'proyectos';
+@import 'productos';
+@import 'nosotros';
+@import 'contacto';
+
+// GENERAL
 
 * {
     padding: 0;
@@ -24,109 +33,6 @@ h1 {
 a {
     text-decoration: none;
     width: auto;
-}
-
-/* HEADER */
-
-.main_header {
-    background-image: linear-gradient(
-    to bottom right,
-    rgb(6, 243, 132) 0%,
-    rgb(6, 243, 38) 40%,
-    rgb(140, 243, 6) 60%,
-    rgb(227, 243, 6) 100%
-    );
-    display: flex;
-
-    &&_img {
-        width: 10vw;
-        margin: 1vw;
-    }
-
-    &&_text {
-        width: 100%;
-        @include flex(flex, center, center);
-        font-size: 2.5vw;
-        bottom: 5px;
-    }
-}
-
-/* NAV */
-
-.main_nav {
-    background-color: rgb(24, 34, 29);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.nav_list {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.nav_list_item {
-    list-style-type: none;
-    text-decoration: none;
-    width: auto;
-    display: flex;
-    font-size: 1.5vw;
-}
-
-.item {
-    text-decoration: none;
-    color: rgb(243, 188, 6);
-    text-align: center;
-    display: flex;
-    width: auto;
-}
-
-.item :hover {
-    background-color: rgb(6, 243, 132);
-    color: rgb(24, 34, 29);
-    text-decoration: none;
-    text-align: center;
-    display: flex;
-    width: auto;
-}
-
-/* INDEX */
-
-.main_content {
-    @include flex(flex, center, center);
-    flex-direction: column;
-    & &_subtitle {
-        margin-top: 2%;
-        margin-bottom: 2%;
-        width: 100%;
-        text-align: center;
-        font-size: 2vw;
-    }
-    & &_section1  {
-        @include flex(flex, center, center);
-        flex-direction: row;
-    }
-    & &_section2  {
-        @extend .main_content_section1; //extensión de las propiedades de section1
-    }
-    & &_img1 {
-        margin: 5%;
-        @include flex(flex, center, center);
-        @include widthImg(50vw, 15px); //inclusión del mixin con propiedades de tamaño
-    }
-    & &_img2 {
-        @extend .main_content_img1; //extensión de las propiedades de img1
-        @include widthImg(32vw, 15px); //inclusión del mixin con propiedades de tamaño
-    }
-    & &_text {
-        margin: 5%;
-        @include flex(flex, center, center);
-        flex-direction: column;
-        width: 75%;
-    }
 }
 
 // utilización de map-get

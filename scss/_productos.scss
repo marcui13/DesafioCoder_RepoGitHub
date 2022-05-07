@@ -1,0 +1,73 @@
+/* PRODUCTOS */
+
+.main_productos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .productos_section {
+        @media (max-width:500px)
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .productos_subtitle {
+        margin: 2%;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .card, .card1 {
+        display: flex;
+        align-items: center;
+        margin: 1%;
+        margin-left: 5%;
+        padding-bottom: 2%;
+    }
+    
+    .card {
+        justify-content: center;
+        @media (max-width:500px)
+        {
+            flex-direction: column;
+        }
+    }
+    
+    .productos_card {
+        display: flex;
+        align-items: center;
+        #productos_img {
+            @media (max-width:500px)
+            {
+                margin: 5%;
+            }
+        }
+        @media (max-width:500px)
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    
+    #productos_text {
+        margin-left: 5%;
+        @media (max-width:500px)
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    
+    .productos_img_dispelctr, .productos_img_impresora3d, .productos_img_pcb, .productos_img_rpa {
+        height: 20vw;
+    }
+    
+}
+
+
