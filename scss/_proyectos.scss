@@ -33,7 +33,7 @@
         align-items: center;
         border: 1px solid black;
         border-radius: 15px;
-        margin: 5%;
+        margin: 3%;
         padding-bottom: 2%;
         @media (max-width:500px)
         {
@@ -64,6 +64,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-align: center;
         width: 60%;
     }
     

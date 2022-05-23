@@ -30,6 +30,7 @@
         }
 
         .nosotros_text {
+            font-size: 1.3rem;
             width: 60%;
             @media (max-width:500px)
             {
@@ -39,8 +40,13 @@
         }
 
         .nosotros_img_equipo {
-            width: 25vw;
+            width: 30vw;
             border-radius: 15px;
+            @media (max-width:1000px)
+            {
+                width: 35vw;
+                height: 25vw;
+            }
             @media (max-width:500px)
             {
                 width: 50vw;
@@ -61,6 +67,22 @@
             flex-direction: column;
             justify-content: space-between;
             margin-bottom: 1vw;
+        }
+
+        .card {
+            height: 32vw;
+            width: 18vw;
+            display: flex;
+            align-items: center;
+
+            @media (max-width:1145px)
+            {
+                height: auto;
+            }
+            @media (max-width:500px)
+            {
+                width: auto;
+            }
         }
 
         .card-body {
