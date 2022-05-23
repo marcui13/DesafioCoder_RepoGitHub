@@ -4,6 +4,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 1.5rem;
+
+    h5{
+        font-size: 1.7rem;
+        color: green;
+    }
 
     .productos_section {
         @media (max-width:500px)

@@ -3,14 +3,15 @@
 .main_content {
     @include flex(flex, center, center);
     flex-direction: column;
-    & &_subtitle {
+    &_subtitle {
         margin-top: 2%;
         margin-bottom: 2%;
         width: 100%;
         text-align: center;
         font-size: 2vw;
     }
-    & &_section1  {
+    &_section1  {
+        width: 100vw;
         @include flex(flex, center, center);
         flex-direction: row;
         @media (max-width:500px)
@@ -19,22 +20,28 @@
             flex-direction: column;
         }
     }
-    & &_section2  {
+    &_section2  {
         @extend .main_content_section1; //extensión de las propiedades de section1
     }
-    & &_img1 {
-        margin: 5%;
+    .div_img {
+        width: 30rem;
         @include flex(flex, center, center);
-        @include widthImg(50vw, 15px); //inclusión del mixin con propiedades de tamaño
+        
     }
-    & &_img2 {
+    &_img1 {
+        margin: 5rem;
+        @include flex(flex, center, center);
+        @include widthImg(25rem, 15px); //inclusión del mixin con propiedades de tamaño
+    }
+    &_img2 {
         @extend .main_content_img1; //extensión de las propiedades de img1
-        @include widthImg(32vw, 15px); //inclusión del mixin con propiedades de tamaño
+        @include widthImg(25rem, 15px); //inclusión del mixin con propiedades de tamaño
     }
-    & &_text {
-        margin: 5%;
+    &_text {
+        font-size: 1.5rem;
         @include flex(flex, center, center);
         flex-direction: column;
         width: 75%;
+        text-align: center;
     }
 }

@@ -1,15 +1,3 @@
-.contacto_texto_ubi {
-  color: rgb(255, 208, 0);
-}
-
-.contacto_texto_mail {
-  color: rgb(255, 0, 0);
-}
-
-.contacto_texto_wsp {
-  color: rgb(90, 247, 0);
-}
-
 /* GRID TEMPLATE AREAS */
 .main_header {
   grid-area: header;
@@ -70,7 +58,7 @@
 }
 
 .main_footer {
-  width: 100%;
+  width: 100vw;
   color: white;
   background-color: rgb(24, 34, 29);
   display: flex;
@@ -109,51 +97,63 @@
   align-items: center;
   flex-direction: column;
 }
-.main_content .main_content_subtitle {
+.main_content_subtitle {
   margin-top: 2%;
   margin-bottom: 2%;
   width: 100%;
   text-align: center;
   font-size: 2vw;
 }
-.main_content .main_content_section1, .main_content .main_content_section2 {
+.main_content_section1, .main_content_section2 {
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
 }
 @media (max-width: 500px) {
-  .main_content .main_content_section1, .main_content .main_content_section2 {
+  .main_content_section1, .main_content_section2 {
     display: flex;
     flex-direction: column;
   }
 }
-.main_content .main_content_img1, .main_content .main_content_img2 {
-  margin: 5%;
+.main_content .div_img {
+  width: 30rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50vw;
+}
+.main_content_img1, .main_content_img2 {
+  margin: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25rem;
   border-radius: 15px;
 }
-.main_content .main_content_img2 {
-  width: 32vw;
+.main_content_img2 {
+  width: 25rem;
   border-radius: 15px;
 }
-.main_content .main_content_text {
-  margin: 5%;
+.main_content_text {
+  font-size: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 75%;
+  text-align: center;
 }
 
 /* PROYECTOS */
 .main_proyectos {
+  font-size: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.main_proyectos h4 {
+  color: green;
 }
 .main_proyectos_subtitle {
   margin: 2%;
@@ -229,6 +229,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 1.5rem;
+}
+.main_productos h5 {
+  font-size: 1.7rem;
+  color: green;
 }
 @media (max-width: 500px) {
   .main_productos .productos_section {
