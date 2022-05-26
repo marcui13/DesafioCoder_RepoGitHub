@@ -18,9 +18,9 @@
 
     &_text {
         width: 100%;
-        @include flex(flex, center, center);
+        @include flex(flex, center, center, row);
         font-size: 2.5vw;
-        @media (max-width:500px)
+        @media (max-width:620px)
         {
             text-align: center;
         }
@@ -29,9 +29,7 @@
     .header_img_a {
         @media (max-width:500px)
         {
-            display: flex;
-            justify-items: center;
-            align-items: center;
+            @include flex(flex, center, center, row);
             margin-left: 5%;
         }
     }

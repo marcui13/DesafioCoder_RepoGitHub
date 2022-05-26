@@ -12,7 +12,8 @@
     }
     
     .nosotros_subtitle {
-        margin: 2%;
+        margin-top: 2%;
+        margin-bottom: 2%;
         width: 100%;
         text-align: center;
     }
@@ -82,6 +83,7 @@
             @media (max-width:500px)
             {
                 width: auto;
+                margin: 2%;
             }
         }
 

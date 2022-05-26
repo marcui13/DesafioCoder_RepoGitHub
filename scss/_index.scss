@@ -1,7 +1,7 @@
 // INDEX
 
 .main_content {
-    @include flex(flex, center, center);
+    @include flex(flex, center, center, row);
     flex-direction: column;
     &_subtitle {
         margin-top: 2%;
@@ -11,10 +11,10 @@
         font-size: 2vw;
     }
     &_section1  {
-        width: 100vw;
-        @include flex(flex, center, center);
+        width: 100%;
+        @include flex(flex, center, center, row);
         flex-direction: row;
-        @media (max-width:500px)
+        @media (max-width:750px)
         {
             display: flex;
             flex-direction: column;
@@ -24,24 +24,35 @@
         @extend .main_content_section1; //extensión de las propiedades de section1
     }
     .div_img {
-        width: 30rem;
-        @include flex(flex, center, center);
+        width: 100%;
+        @include flex(flex, center, center, row);
         
     }
     &_img1 {
-        margin: 5rem;
-        @include flex(flex, center, center);
+        margin-top: 1.5rem;
+        margin-bottom: 3rem;
+        @include flex(flex, center, center, row);
         @include widthImg(25rem, 15px); //inclusión del mixin con propiedades de tamaño
+        @media (max-width:500px)
+        {
+            display: flex;
+            flex-direction: column;
+            @include widthImg(19rem, 15px);
+        }
     }
     &_img2 {
         @extend .main_content_img1; //extensión de las propiedades de img1
-        @include widthImg(25rem, 15px); //inclusión del mixin con propiedades de tamaño
     }
     &_text {
         font-size: 1.5rem;
-        @include flex(flex, center, center);
+        @include flex(flex, center, center, row);
         flex-direction: column;
         width: 75%;
         text-align: center;
+        margin-right: 5rem;
+        @media (max-width:940px)
+        {
+            margin-right: 0;
+        }
     }
 }

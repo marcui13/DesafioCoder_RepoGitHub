@@ -1,5 +1,6 @@
-@mixin flex ($disp, $justCont, $alItem) {
+@mixin flex ($disp, $justCont, $alItem, $flexDir) {
     display: $disp;
     justify-content: $justCont;
     align-items: $alItem;
+    flex-direction: $flexDir;
 }

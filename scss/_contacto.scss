@@ -16,6 +16,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        @media (max-width:768px) {
+            justify-content: space-evenly;
+        }
 
         .contacto_map {
             margin: 5%;
@@ -34,13 +37,21 @@
                 width: 40vw;
                 height: 20vw;
                 margin: 10%;
+                @media (max-width:768px) {
+                    width: 40vw;
+                    height: 70vw;
+                }
+                @media (max-width: 500px) {
+                    width: 20rem;
+                    height: 10rem;
+                }
             }
         }
 
         .contacto {
             display: flex;
             flex-direction: column;
-            width: 100%;
+            width: auto;
             margin-left: 15%;
             margin-bottom: 10%;
 
@@ -54,6 +65,11 @@
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
+                @include flex(flex, flex-start, center, row);
+                margin-top: 5%;
+                @media (max-width:768px) {
+                    margin-top: 10%;
+                }
 
                 .contacto_img_ubi, .contacto_img_mail, .contacto_img_wsp {
                     height: 3vw;
