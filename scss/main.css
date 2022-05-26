@@ -306,6 +306,7 @@
 }
 .main_productos #productos_text {
   margin-left: 5%;
+  padding-right: 7%;
 }
 @media (max-width: 500px) {
   .main_productos #productos_text {
