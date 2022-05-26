@@ -29,6 +29,7 @@
 }
 
 .main_header {
+  width: 100%;
   background-image: linear-gradient(to bottom right, rgb(6, 243, 132) 0%, rgb(6, 243, 38) 40%, rgb(140, 243, 6) 60%, rgb(227, 243, 6) 100%);
   display: flex;
 }
@@ -58,7 +59,7 @@
 }
 
 .main_footer {
-  width: 100vw;
+  width: 100%;
   color: white;
   background-color: rgb(24, 34, 29);
   display: flex;
