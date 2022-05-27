@@ -1,0 +1,104 @@
+/* CONTACTO */
+
+.contacto_subtitle {
+    text-align: center;
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.section_contacto {
+    @media (max-width:500px)
+    {
+        flex-direction: column;
+    }
+    .contacto_div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media (max-width:768px) {
+            justify-content: space-evenly;
+        }
+
+        .contacto_map {
+            margin: 5%;
+            width: 50vw;
+            display: flex;
+
+            @media (max-width:500px)
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 3%;
+            }
+
+            .map {
+                width: 40vw;
+                height: 20vw;
+                margin: 10%;
+                @media (max-width:768px) {
+                    width: 40vw;
+                    height: 70vw;
+                }
+                @media (max-width: 500px) {
+                    width: 20rem;
+                    height: 10rem;
+                }
+            }
+        }
+
+        .contacto {
+            display: flex;
+            flex-direction: column;
+            width: auto;
+            margin-left: 15%;
+            margin-bottom: 10%;
+
+            @media (max-width:500px)
+            {
+                justify-content: center;
+                margin-left: 3%;
+            }
+
+            .contacto_item {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                @include flex(flex, flex-start, center, row);
+                margin-top: 5%;
+                @media (max-width:768px) {
+                    margin-top: 10%;
+                }
+
+                .contacto_img_ubi, .contacto_img_mail, .contacto_img_wsp {
+                    height: 3vw;
+                    @media (max-width:500px)
+                    {
+                        height: 8vw;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+
+.contacto_for {
+    padding: 3vw;
+    
+    form {
+        width: auto;
+    }
+}
+
+.row {
+    margin: 1%;
+    padding: 1%;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+
+

@@ -1,0 +1,9 @@
+// implementación de un mixin con propiedades de tamaño
+
+@mixin widthImg ($ancho, $bord) {
+    width: $ancho;
+    border-radius: $bord;
+}
+
+
+
